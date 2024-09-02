@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --primary: #A8F04A;
+    --lightgrey: #f4f4f4;
+    --lightgrey-border: #e9e2e2;
+    --darkgrey: #a3a3a3;
+    --text-primary: #595959;
+    --text-secondary: #f8faf4;
+
+    --red: #ff0000;
+    --green: #00ff00;
+    --white: #fff;
+    --black: #000;
+
+
+    --bs-heading-color: var(--text-primary) !important;
+    --bs-body-color: var(--text-primary) !important;
+    --bs-table-color: var(--text-primary) !important;
+}
+a {
+    background-color: var(--primary);
+}
