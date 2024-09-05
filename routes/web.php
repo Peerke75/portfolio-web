@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController; 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,7 +21,9 @@ Route::get('/projects', function () {
     return view('projects');
 });
 
-
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
+->middleware('auth')
+->name('logout');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,4 +35,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('/contact', [ContactController::class, 'sendContactForm']);
 require __DIR__.'/auth.php';
