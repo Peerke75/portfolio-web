@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Portfolio Mees</title>
 </head>
-<header>
-    @include('components.nav-menu')
+
+<header class="bg-gray-900 text-white">
+    <div class="container mx-auto py-4 px-6">
+        @include('components.nav-menu')
+    </div>
 </header>
 
-<body>
-    @yield('content')
-
+<body class="font-sans bg-gray-100 text-gray-800">
+    <div class="container mx-auto">
+        @yield('content')
+    </div>
 </body>
-<footer>
 
+<footer class="bg-gray-900 text-white py-6 mt-12">
+    <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; 2024 Portfolio Mees. All rights reserved.</p>
+    </div>
 </footer>
 
 </html>
