@@ -26,7 +26,7 @@ class ContactController extends Controller
         ]);
 
         // Redirect back with a success message
-        return back()->with('success', 'JE uitnodeging is succesvol verstuurd!');
+        return back()->with('success', 'Je uitnodeging is succesvol verstuurd!');
     }
 }
             
